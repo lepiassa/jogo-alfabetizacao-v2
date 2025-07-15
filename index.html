@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura da Alfabetização - Jogo Educativo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div id="start-screen" class="screen active">
+        <div class="background forest-bg">
+            <div class="start-content">
+                <h1 class="game-title">Aventura da Alfabetização</h1>
+                <div class="character-container">
+                    <img src="assets/images/character_mario_style.png" alt="Personagem" class="main-character">
+                </div>
+                <p class="game-subtitle">Embarque numa aventura mágica de aprendizado!</p>
+                <button id="start-btn" class="btn btn-primary">Começar Aventura</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Seleção de Fase -->
+    <div id="level-select" class="screen">
+        <div class="background forest-bg">
+            <div class="level-content">
+                <h2 class="screen-title">Escolha sua Aventura</h2>
+                <div class="levels-container">
+                    <div class="level-card" data-level="forest">
+                        <div class="level-image">
+                            <img src="assets/images/forest_background.png" alt="Floresta Mágica">
+                        </div>
+                        <h3>Floresta Mágica</h3>
+                        <p>Descubra as letras escondidas!</p>
+                        <button class="btn btn-secondary">Explorar</button>
+                    </div>
+                    <div class="level-card" data-level="castle">
+                        <div class="level-image">
+                            <img src="assets/images/castle_background.png" alt="Castelo Encantado">
+                        </div>
+                        <h3>Castelo Encantado</h3>
+                        <p>Complete as palavras mágicas!</p>
+                        <button class="btn btn-secondary">Explorar</button>
+                    </div>
+                    <div class="level-card" data-level="mountain">
+                        <div class="level-image">
+                            <img src="assets/images/mountain_background.png" alt="Montanha dos Desafios">
+                        </div>
+                        <h3>Montanha dos Desafios</h3>
+                        <p>Forme frases incríveis!</p>
+                        <button class="btn btn-secondary">Explorar</button>
+                    </div>
+                </div>
+                <button id="back-to-start" class="btn btn-back">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="game-screen" class="screen">
+        <div class="background" id="game-background">
+            <div class="game-header">
+                <div class="score-container">
+                    <img src="assets/images/coin_reward.png" alt="Moedas" class="score-icon">
+                    <span id="score">0</span>
+                </div>
+                <div class="lives-container">
+                    <img src="assets/images/star_reward.png" alt="Vidas" class="lives-icon">
+                    <span id="lives">3</span>
+                </div>
+                <button id="back-to-levels" class="btn btn-back">Voltar</button>
+            </div>
+
+            <div class="game-content">
+                <!-- Quiz de Múltipla Escolha -->
+                <div id="quiz-game" class="game-mode">
+                    <div class="question-container">
+                        <h3 id="quiz-question" class="question-text"></h3>
+                        <div id="quiz-options" class="options-container">
+                            <!-- Opções serão inseridas dinamicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complete a Frase -->
+                <div id="complete-game" class="game-mode">
+                    <div class="sentence-container">
+                        <div class="sentence-image">
+                            <img id="sentence-img" src="" alt="Imagem da frase">
+                        </div>
+                        <div class="sentence-text">
+                            <p id="sentence-question"></p>
+                            <div class="input-container">
+                                <input type="text" id="sentence-input" placeholder="Digite a palavra...">
+                                <button id="check-answer" class="btn btn-primary">Verificar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div id="feedback" class="feedback-container">
+                <div class="feedback-content">
+                    <div id="feedback-icon" class="feedback-icon"></div>
+                    <p id="feedback-text"></p>
+                    <button id="next-question" class="btn btn-primary">Próxima</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Parabéns -->
+    <div id="congratulations" class="screen">
+        <div class="background castle-bg">
+            <div class="congrats-content">
+                <h2 class="congrats-title">Parabéns!</h2>
+                <div class="character-container">
+                    <img src="assets/images/character_mario_style.png" alt="Personagem" class="main-character celebration">
+                </div>
+                <p class="congrats-text">Você completou a aventura!</p>
+                <div class="final-score">
+                    <img src="assets/images/coin_reward.png" alt="Moedas" class="score-icon">
+                    <span id="final-score">0</span>
+                </div>
+                <div class="congrats-buttons">
+                    <button id="play-again" class="btn btn-primary">Jogar Novamente</button>
+                    <button id="back-to-menu" class="btn btn-secondary">Menu Principal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
