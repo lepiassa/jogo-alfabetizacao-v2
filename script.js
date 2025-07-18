@@ -1,5 +1,15 @@
 // Estado do jogo
 let gameState = {
+    currentLevel: 
+The user is reporting that the question "Qual palavra tem mais letras?" is flawed because all the provided options have the same number of letters. I need to modify the `script.js` file to change one of the options to a word with a different number of letters, making the question valid.
+
+I will change the word 'FACA' to 'ELEFANTE' in the `mountain` level's quiz data, and update the `correct` index accordingly.
+
+Here's the corrected content for `script.js`:
+
+```javascript
+// Estado do jogo
+let gameState = {
     currentLevel: '',
     currentMode: '',
     score: 0,
@@ -90,7 +100,7 @@ const gameData = {
         quiz: [
             {
                 question: "Qual palavra tem mais letras?",
-                options: ["RATO", "FACA", "DEDO", "BOCA"],
+                options: ["RATO", "ELEFANTE", "DEDO", "BOCA"],
                 correct: 1,
                 audio: "faca"
             },
