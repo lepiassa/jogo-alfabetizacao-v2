@@ -37,13 +37,13 @@ const gameData = {
             {
                 sentence: "O ____ mia.",
                 answer: "gato",
-                image: "assets/images/character_mario_style.png",
+                image: "character_mario_style.png",
                 audio: "gato"
             },
             {
                 sentence: "A ____ rola.",
                 answer: "bola",
-                image: "assets/images/coin_reward.png",
+                image: "coin_reward.png",
                 audio: "bola"
             }
         ]
@@ -74,13 +74,13 @@ const gameData = {
             {
                 sentence: "A ____ é bonita.",
                 answer: "casa",
-                image: "assets/images/castle_background.png",
+                image: "castle_background.png",
                 audio: "casa"
             },
             {
                 sentence: "O ____ pula.",
                 answer: "sapo",
-                image: "assets/images/star_reward.png",
+                image: "star_reward.png",
                 audio: "sapo"
             }
         ]
@@ -111,13 +111,13 @@ const gameData = {
             {
                 sentence: "O ____ come queijo.",
                 answer: "rato",
-                image: "assets/images/character_mario_style.png",
+                image: "character_mario_style.png",
                 audio: "rato"
             },
             {
                 sentence: "A ____ fala.",
                 answer: "boca",
-                image: "assets/images/star_reward.png",
+                image: "star_reward.png",
                 audio: "boca"
             }
         ]
@@ -341,7 +341,7 @@ function updateUI() {
 
 function playAudio(audioName) {
     try {
-        const audio = new Audio(`assets/audio/${audioName}.wav`);
+        const audio = new Audio(`${audioName}.wav`);
         audio.volume = 0.7;
         audio.play().catch(e => console.log('Erro ao reproduzir áudio:', e));
     } catch (e) {
