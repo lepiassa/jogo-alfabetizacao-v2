@@ -37,15 +37,15 @@ body {
 }
 
 .forest-bg {
-    background-image: url('../assets/images/forest_background.png');
+    background-image: url('forest_background.png');
 }
 
 .castle-bg {
-    background-image: url('../assets/images/castle_background.png');
+    background-image: url('castle_background.png');
 }
 
 .mountain-bg {
-    background-image: url('../assets/images/mountain_background.png');
+    background-image: url('mountain_background.png');
 }
 
 /* Overlay para melhor legibilidade */
@@ -557,4 +557,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
